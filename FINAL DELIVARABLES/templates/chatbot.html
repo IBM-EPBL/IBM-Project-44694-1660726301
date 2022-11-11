@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Keep your money secure with our bank</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</head>
+<style type="text/css">
+.dropdown-content {
+  display: none;
+  position: absolute;
+  min-width: 200px;
+  box-shadow: 10px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.content{
+  background-image: url({{ url_for ('static', filename = 'back.png') }});
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 85vh;
+  min-width: 100%;
+  background-size: cover;
+}
+.info{
+  top: 40%;
+  position: absolute;
+  background-color: #ff9900;
+  border: 3px solid white;
+  border-radius: 100px;
+  border-top-left-radius: 0px;
+}
+.quote{
+  font-size: 24px;
+}
+
+@media screen and (max-width: 600px) {
+  .info {
+    width:90%;
+    top: 52%;
+    position: absolute;
+  }
+  .quote{
+    font-size: 15px;
+  }
+  .content{
+    background-image:  url({{ url_for ('static', filename = 'back2.png') }});
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .dropdown-content {
+  display: none;
+  position: absolute;
+  min-width: 200px;
+  box-shadow: 10px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+}
+
+</style>
+<body>
+<!--Navbar-->
+
+<div class="bg-dark text-light">
+<nav class="container navbar navbar-expand-lg navbar-dark bg-dark p-2">
+  <p class="navbar-brand mt-2">
+  <img src="{{url_for('static', filename='bank.png')}}" align="middle" width="40px" height="40px" />&nbsp;&nbsp;SRP<sup>2</sup> Bank </p>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav ml-auto">
+      <div class="dropdown">
+        <li class="nav-item p-3 mt-2  dropbtn">Explore Products</li>
+         <div class="dropdown-content bg-light text-dark">
+          <a href="#">Accounts</a>
+          <a href="#">Loans</a>
+          <a href="#">Transactions</a>
+          <a href="#">Deposit</a>
+          <a href="#">Cards</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <li class="nav-item p-3 mt-2  dropbtn">Make Payments</li>
+         <div class="dropdown-content bg-light text-dark">
+          <a href="#">Money Transfer</a>
+          <a href="#">Bill Payments</a>
+          <a href="#">Card Payment</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <li class="nav-item p-3 mt-2  dropbtn">Service Request</li>
+         <div class="dropdown-content bg-light text-dark">
+          <a href="#">Update Profile</a>
+          <a href="#">Saving and Current Account</a>
+          <a href="#">Debit and Credit Card</a>
+        </div>
+      </div>
+     
+      <li class="nav-item p-2 ml-2 bg-light" style="border-radius: 30px">
+      <img src="{{url_for('static', filename='robot.png')}}" align="middle" width="40px" height="40px" style="width:60px;height: 60px;padding: 10px; border-radius: 25px;" class="bg-warning"/>
+        <span class="text-dark typewrite">&nbsp;&nbsp;&nbsp;AI Chat Bot will Help You  &#128071;&nbsp;&nbsp;</span></li> 
+    </ul>
+  </div>
+</nav>
+</div>
+
+
+
+<div class="content container">
+  <div class="col-sm-6 info p-4 p-3">
+    <center><b class="text-light quote"> ❝ The art is not in making money, but in keeping it ❞</b></center>
+        <marquee
+          behavior="slide"
+          direction="up"
+          scrollamount="1"
+          class="mt-2"
+        >
+        <center>
+          <p>Money is a terrible master but an excellent servant.</p>
+          <p>❛ Keep your money secure with our bank ❜</p>
+        </center>
+        </marquee>   
+  </div>
+</div>
+<script>
+  window.watsonAssistantChatOptions = {
+    integrationID: "508444e6-3d40-4b32-a4bc-75424ab2cd1c", // The ID of this integration.
+    region: "au-syd", // The region your integration is hosted in.
+    serviceInstanceID: "6e1377cd-ed8b-4bd1-8137-5e10d7c41b74", // The ID of your service instance.
+    onLoad: function(instance) { instance.render(); }
+  };
+  setTimeout(function(){
+    const t=document.createElement('script');
+    t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+    document.head.appendChild(t);
+  });
+</script>
+<body>
+</html>
