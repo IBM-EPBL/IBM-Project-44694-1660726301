@@ -1,6 +1,6 @@
 # IBM-Project-44694-1660726301
 # AI based discourse for Banking Industry
-# Team Member
+# Team Members
 1. Ramkumar S<br/>
 2. Pravin S<br/>
 3. Saravanan J<br/>
