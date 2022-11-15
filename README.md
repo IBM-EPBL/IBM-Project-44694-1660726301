@@ -6,4 +6,6 @@
 3. Saravanan J<br/>
 4. Poomanikandan M
 <br/>
-![Bank Home Page](https://user-images.githubusercontent.com/113909970/200543479-89b1e64c-3917-4284-8962-d975945a7524.png)
+# Bank Home Page
+<hr/>
+<img src="https://user-images.githubusercontent.com/113909970/200543479-89b1e64c-3917-4284-8962-d975945a7524.png"/>
